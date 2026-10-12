@@ -13,3 +13,39 @@
 @media(max-width:900px){.nav-links{gap:15px}.nav-links a{font-size:11px}.hero-grid{gap:10px}.hero-art{transform:scale(.88)}.two-column,.achievements-grid,.contact-grid{gap:45px}.section{padding:82px 0}}
 @media(max-width:700px){.container{width:min(100% - 34px,560px)}.site-header{height:68px}.menu-toggle{display:block}.nav-links{display:none;position:absolute;left:0;right:0;top:68px;background:#f7f8f4;padding:18px 24px 24px;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:0}.nav-links.open{display:flex}.nav-links a{padding:12px 4px;font-size:13px}.nav-links .nav-contact{text-align:center;margin-top:7px;padding:12px}.hero{padding-top:56px}.hero-grid{grid-template-columns:1fr;gap:0}.hero h1{font-size:clamp(38px,11vw,55px)}.hero-intro{font-size:14px}.hero-art{min-height:350px;transform:scale(.86);margin:-5px 0}.hero-bottom{margin-top:10px;gap:12px;flex-wrap:wrap}.hero-bottom span{font-size:8px}.intro-strip-inner{display:block}.intro-strip h2{margin-top:12px}.section{padding:68px 0}.two-column,.achievements-grid,.contact-grid{grid-template-columns:1fr;gap:30px}.section-heading{display:block}.section-heading .section-lead{margin-top:18px}.research-grid{grid-template-columns:1fr}.research-card{padding:25px;min-height:0}.project-item{grid-template-columns:1fr 25px;gap:10px;padding:25px 0}.project-index{grid-column:1/-1}.project-content h3{font-size:19px}.publication{grid-template-columns:1fr;gap:13px}.publication-main h3{font-size:18px}.publication-footer{display:block;line-height:1.8}.publication-footer span{display:block}.publication-footer span:last-child{text-align:left;margin-top:6px}.contact-panel{padding:20px}.contact-row{font-size:10px}.footer-inner{gap:14px}.footer-inner p{order:3;width:100%}.back-top{margin-left:auto}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
+
+
+/* CV expansion sections */
+.subsection-title{font-family:var(--display);font-size:17px;letter-spacing:-.03em;margin:32px 0 0;color:var(--green)}
+.publication-authors{font-size:12px;color:#566b61;margin:0 0 7px}
+.scholar-callout{display:flex;justify-content:space-between;align-items:center;gap:24px;background:#e4eee4;padding:25px;margin-top:25px}
+.scholar-callout h3{font-family:var(--display);font-size:18px;margin:0 0 5px}
+.scholar-callout p{font-size:12px;color:#65756e;margin:0}
+.timeline{border-top:1px solid #cbd9cb;margin-top:35px}
+.timeline-item{display:grid;grid-template-columns:150px 1fr;gap:30px;padding:26px 0;border-bottom:1px solid #cbd9cb}
+.timeline-date{font-size:11px;letter-spacing:.08em;color:var(--green);font-weight:700;padding-top:5px}
+.timeline-item h3{font-family:var(--display);font-size:18px;letter-spacing:-.03em;margin:0 0 8px}
+.timeline-item p,.timeline-item li{font-size:13px;color:#61736a;line-height:1.8;margin-bottom:6px}
+.timeline-item ul{padding-left:18px;margin:8px 0 0}
+.awards-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:35px}
+.award-card,.skill-card{background:#fff;border:1px solid #dce5da;padding:23px}
+.award-card span{font-size:9px;letter-spacing:.14em;color:var(--green);font-weight:700}
+.award-card h3,.skill-card h3{font-family:var(--display);font-size:16px;margin:10px 0 7px}
+.award-card p,.skill-card p{font-size:12px;line-height:1.8;color:#65756e;margin:0}
+.skills-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:13px;margin-top:32px}
+.teaching-list{margin-top:30px;border-top:1px solid var(--line)}
+.teaching-list>div{display:grid;grid-template-columns:170px 1fr;gap:20px;padding:17px 0;border-bottom:1px solid var(--line)}
+.teaching-list span{font-size:11px;color:var(--green);font-weight:700}
+.teaching-list strong{font-size:13px;font-weight:600}
+.event-list{display:grid;grid-template-columns:repeat(2,1fr);gap:13px;margin-top:32px}
+.event-list article{background:#fff;border:1px solid #dce5da;padding:24px}
+.event-list article>span{font-size:9px;letter-spacing:.12em;color:var(--green);font-weight:700}
+.event-list h3{font-family:var(--display);font-size:16px;line-height:1.5;margin:12px 0 8px}
+.event-list p{font-size:12px;color:#65756e;line-height:1.8;margin:0}
+.references-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:32px}
+.references-grid article{border:1px solid #dce5da;background:white;padding:22px}
+.references-grid h3{font-family:var(--display);font-size:16px;margin:0 0 8px}
+.references-grid p{font-size:12px;color:#65756e;line-height:1.7;margin:0 0 6px}
+.references-grid a{color:var(--green)}
+.light-disclaimer{color:#64756b}
+@media(max-width:700px){.timeline-item{grid-template-columns:1fr;gap:8px}.awards-grid,.skills-grid,.event-list,.references-grid{grid-template-columns:1fr}.scholar-callout{display:block}.scholar-callout .button{margin-top:18px}.teaching-list>div{grid-template-columns:1fr;gap:5px}}

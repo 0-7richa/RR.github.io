@@ -10,7 +10,7 @@ A responsive, static website for an academic portfolio, research showcase, and p
 ## Before publishing
 1. Open `index.html` in a text editor.
 2. Replace `YOUR.EMAIL@EXAMPLE.COM` with the professional email address you want to publish.
-3. Add verified Google Scholar, ORCID, LinkedIn, and other profile URLs.
+3. Google Scholar and email from the CV are included. Add verified ORCID, LinkedIn, ResearchGate, and Scopus profile URLs.
 4. Add verified degrees, institutions, dates, complete publication list, author order, and academic achievements.
 5. Review all research/project descriptions for accuracy.
 6. Save the changes.
@@ -32,3 +32,7 @@ GitHub Pages hosting is free for public repositories. A custom domain is optiona
 
 ## Important
 This is a static website. The contact email link opens the visitor's email application; there is no server-side contact form. Do not publish private information. Keep institutional affiliations, credentials, awards, and publication metadata accurate.
+
+
+## CV details included
+Education, thesis topics, work experience, technical skills, teaching assistantship, research interests, fellowships and funding, conference presentations/workshops, languages, strengths, publications, and academic references have been added from the supplied CV. Verify referee consent before publishing their contact details publicly.
