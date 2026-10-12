@@ -197,3 +197,27 @@ body{background:#EFF0F5;color:#292433}
 .hobby-details h4{font-size:13px;color:#34264F;margin:0 0 8px}
 .hobby-details p{font-size:11px;line-height:1.8;color:#70687D;margin:0}
 @media(max-width:700px){.hobby-grid,.hobby-details{grid-template-columns:1fr}.hobby-card{min-height:230px}.hobbies-wrap{padding-top:44px}}
+
+
+/* === Readability update: larger typography throughout === */
+html{font-size:17px;scroll-behavior:smooth}
+body{font-size:16px;line-height:1.75}
+.body-copy p{font-size:16px;line-height:1.9}
+.section-lead,.hobbies-heading>p:last-child{font-size:15px;line-height:1.85}
+.personal-copy>p:not(.eyebrow){font-size:15px;line-height:1.9}
+.hobby-card-content>span{font-size:13px;line-height:1.75}
+.hobby-details p{font-size:13px;line-height:1.85}
+.hobby-details h4{font-size:15px}
+.personal-values strong{font-size:14px}
+.personal-values small{font-size:12px;line-height:1.6}
+.timeline-item p,.timeline-item li,.award-card p,.skill-card p,.event-list p,.references-grid p{font-size:14px;line-height:1.85}
+.teaching-list strong{font-size:15px}
+.teaching-list span{font-size:13px}
+.publication p,.research-card p,.project-item p{font-size:15px;line-height:1.85}
+.nav-links{font-size:14px}
+@media(max-width:700px){
+  html{font-size:16px}
+  .body-copy p{font-size:15px}
+  .personal-copy>p:not(.eyebrow){font-size:15px}
+  .nav-links{font-size:15px}
+}
