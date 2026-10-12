@@ -270,3 +270,83 @@ nav a, .nav-links a, .button, .btn { font-size: 1rem; }
   p, li, .timeline-role, .publication-authors, .publication-meta,
   .project-card p, .personal-copy p, .about-copy p { font-size: 1rem; }
 }
+
+.research-questions {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 56px;
+  align-items: start;
+  padding: 64px 0;
+  background: #eff0f5;
+  color: #292431;
+}
+
+.research-questions-heading .section-kicker {
+  display: block;
+  margin-bottom: 22px;
+  color: #65518a;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  line-height: 1.6;
+}
+
+.research-questions-heading h2 {
+  margin: 0;
+  color: #292431;
+  font-size: clamp(32px, 4vw, 48px);
+  line-height: 1.15;
+  letter-spacing: -1.5px;
+}
+
+.research-questions-heading h2 span {
+  color: #65518a;
+}
+
+.research-questions-content {
+  display: grid;
+  gap: 24px;
+}
+
+.research-question {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #d5cde2;
+}
+
+.research-question:last-child {
+  border-bottom: none;
+}
+
+.research-question h3 {
+  margin: 0 0 8px;
+  color: #34264f;
+  font-size: 21px;
+  line-height: 1.4;
+}
+
+.research-question p {
+  margin: 0;
+  color: #403b49;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+  .research-questions {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 44px 0;
+  }
+
+  .research-questions-heading h2 {
+    font-size: 34px;
+  }
+
+  .research-question h3 {
+    font-size: 19px;
+  }
+
+  .research-question p {
+    font-size: 16px;
+  }
+}
