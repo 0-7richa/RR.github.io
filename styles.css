@@ -221,3 +221,22 @@ body{font-size:16px;line-height:1.75}
   .personal-copy>p:not(.eyebrow){font-size:15px}
   .nav-links{font-size:15px}
 }
+
+
+/* === Personal profile refinement: stronger contrast and larger heading === */
+.personal-copy .eyebrow{font-size:12px;letter-spacing:.18em;font-weight:800;color:#51406F}
+.personal-copy .section-title{font-size:clamp(38px,5vw,62px);line-height:1.08;font-weight:800;letter-spacing:-.055em;color:#25212B;margin-top:14px;margin-bottom:28px}
+.personal-copy .section-title span{color:#65518A}
+.personal-copy>p:not(.eyebrow){font-size:17px;line-height:1.9;color:#302C36;font-weight:500}
+.portrait-caption{font-size:13px;color:#4D4657;font-weight:500}
+.hobbies-heading .eyebrow{font-size:12px;font-weight:800;color:#51406F}
+.hobbies-heading h3{font-size:clamp(28px,3.2vw,40px);color:#282330;font-weight:800}
+.hobbies-heading>p:last-child{font-size:16px;color:#393440;font-weight:500}
+.hobby-card-content small{font-size:11px;font-weight:800}
+.hobby-card-content strong{font-size:22px}
+.hobby-card-content>span{font-size:14px}
+.hobby-details h4{font-size:17px;font-weight:800;color:#282330}
+.hobby-details p{font-size:15px;color:#393440}
+.personal-values strong{font-size:15px}
+.personal-values small{font-size:13px;color:#484151}
+@media(max-width:700px){.personal-copy .section-title{font-size:clamp(36px,10vw,48px)}.personal-copy>p:not(.eyebrow){font-size:16px}.hobbies-heading h3{font-size:30px}}
