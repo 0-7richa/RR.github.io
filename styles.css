@@ -240,3 +240,30 @@ body{font-size:16px;line-height:1.75}
 .personal-values strong{font-size:15px}
 .personal-values small{font-size:13px;color:#484151}
 @media(max-width:700px){.personal-copy .section-title{font-size:clamp(36px,10vw,48px)}.personal-copy>p:not(.eyebrow){font-size:16px}.hobbies-heading h3{font-size:30px}}
+
+/* Featured publications within the research overview */
+.research-paper-links {
+  margin-top: 2.5rem;
+  padding: 1.6rem 1.8rem;
+  border-left: 4px solid #65518A;
+  background: #f3f0f7;
+  border-radius: 0 12px 12px 0;
+}
+.research-paper-links h3 {
+  margin: 0.35rem 0 1rem;
+  color: #241f2b;
+  font-size: clamp(1.35rem, 2vw, 1.7rem);
+}
+.research-paper-links p {
+  margin: 0.8rem 0;
+  color: #24202b;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+.research-paper-links a {
+  color: #34264F;
+  font-weight: 700;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+.research-paper-links a:hover { color: #65518A; }
