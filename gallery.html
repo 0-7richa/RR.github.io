@@ -1,0 +1,794 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Beyond the Lab | Richa Ranjan</title>
+  <meta name="description"
+        content="Explore Richa Ranjan's professional achievements, research community, conference memories and personal interests.">
+
+  <style>
+    :root {
+      --purple: #34264F;
+      --purple-light: #65518A;
+      --silver: #C2B8D5;
+      --background: #F7F6FA;
+      --text: #292533;
+      --muted: #716B7B;
+      --border: #E5E0EC;
+      --white: #FFFFFF;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(255, 255, 255, 0.96);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(12px);
+    }
+
+    .nav-container {
+      max-width: 1240px;
+      margin: auto;
+      padding: 17px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      color: var(--purple);
+      font-size: 1.05rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .nav-links a:hover,
+    .nav-links .active {
+      color: var(--purple-light);
+    }
+
+    .hero {
+      background:
+        radial-gradient(circle at 90% 10%, #EAE4F2 0, transparent 35%),
+        var(--background);
+      padding: 76px 28px 66px;
+    }
+
+    .hero-inner,
+    .container {
+      max-width: 1160px;
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      color: var(--purple-light);
+      font-size: 0.76rem;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin: 0 0 18px;
+    }
+
+    h1 {
+      color: var(--purple);
+      font-size: clamp(2.4rem, 5vw, 4.2rem);
+      line-height: 1.12;
+      letter-spacing: -0.045em;
+      max-width: 850px;
+      margin: 0 0 22px;
+    }
+
+    h1 span {
+      color: var(--purple-light);
+    }
+
+    .hero-description {
+      max-width: 700px;
+      color: #514B5B;
+      font-size: 1.08rem;
+      margin: 0;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 28px;
+    }
+
+    .button {
+      display: inline-block;
+      border: 1px solid var(--purple);
+      background: var(--purple);
+      color: white;
+      border-radius: 7px;
+      padding: 11px 18px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      transition: 0.2s ease;
+    }
+
+    .button:hover {
+      background: var(--purple-light);
+      border-color: var(--purple-light);
+    }
+
+    .button-outline {
+      color: var(--purple);
+      background: transparent;
+    }
+
+    .button-outline:hover {
+      color: white;
+    }
+
+    .gallery-section {
+      padding: 68px 28px;
+    }
+
+    .gallery-section.alternate {
+      background: var(--background);
+    }
+
+    .section-heading {
+      max-width: 720px;
+      margin-bottom: 32px;
+    }
+
+    .section-heading h2 {
+      color: var(--purple);
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      line-height: 1.2;
+      letter-spacing: -0.03em;
+      margin: 0 0 12px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .filter-bar {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 28px;
+    }
+
+    .filter-button {
+      border: 1px solid var(--border);
+      background: white;
+      color: var(--purple);
+      border-radius: 30px;
+      padding: 8px 16px;
+      cursor: pointer;
+      font-size: 0.88rem;
+      font-weight: 700;
+    }
+
+    .filter-button:hover,
+    .filter-button.active {
+      background: var(--purple);
+      border-color: var(--purple);
+      color: white;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .gallery-card {
+      min-width: 0;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 5px 22px rgba(52, 38, 79, 0.045);
+      transition: transform 0.22s ease, box-shadow 0.22s ease;
+    }
+
+    .gallery-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(52, 38, 79, 0.11);
+    }
+
+    .gallery-card[hidden] {
+      display: none;
+    }
+
+    .image-button {
+      position: relative;
+      display: block;
+      width: 100%;
+      padding: 0;
+      border: 0;
+      background: #EAE6EF;
+      cursor: zoom-in;
+      overflow: hidden;
+    }
+
+    .gallery-card img {
+      display: block;
+      width: 100%;
+      height: 270px;
+      object-fit: cover;
+      transition: transform 0.35s ease;
+    }
+
+    .gallery-card:hover img {
+      transform: scale(1.035);
+    }
+
+    .image-hint {
+      position: absolute;
+      right: 12px;
+      bottom: 12px;
+      color: white;
+      background: rgba(34, 25, 48, 0.78);
+      padding: 5px 10px;
+      border-radius: 20px;
+      font-size: 0.74rem;
+    }
+
+    .card-content {
+      padding: 21px;
+    }
+
+    .card-category {
+      color: var(--purple-light);
+      font-size: 0.7rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin: 0 0 8px;
+    }
+
+    .card-content h3 {
+      color: var(--purple);
+      font-size: 1.2rem;
+      line-height: 1.35;
+      margin: 0 0 10px;
+    }
+
+    .card-content p:last-child {
+      color: var(--muted);
+      font-size: 0.94rem;
+      margin: 0;
+    }
+
+    .award-card {
+      grid-column: span 2;
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    }
+
+    .award-card .image-button {
+      height: 100%;
+      min-height: 330px;
+    }
+
+    .award-card img {
+      height: 100%;
+      min-height: 330px;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .award-card .card-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 28px;
+    }
+
+    .award-label {
+      display: inline-block;
+      width: fit-content;
+      padding: 5px 10px;
+      background: #F0ECF6;
+      color: var(--purple);
+      border-radius: 5px;
+      font-size: 0.72rem;
+      font-weight: 800;
+      margin-bottom: 14px;
+    }
+
+    .closing-section {
+      padding: 64px 28px;
+      background: var(--purple);
+      color: white;
+      text-align: center;
+    }
+
+    .closing-section h2 {
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      margin: 0 0 12px;
+    }
+
+    .closing-section p {
+      max-width: 650px;
+      margin: 0 auto 24px;
+      color: #E4DDEC;
+    }
+
+    .closing-section .button {
+      background: white;
+      border-color: white;
+      color: var(--purple);
+    }
+
+    footer {
+      padding: 23px 28px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      background: rgba(20, 15, 29, 0.92);
+    }
+
+    .lightbox.open {
+      display: flex;
+    }
+
+    .lightbox-content {
+      max-width: 1100px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .lightbox img {
+      max-width: 100%;
+      max-height: 78vh;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      border-radius: 7px;
+    }
+
+    .lightbox-caption {
+      color: white;
+      margin-top: 12px;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 16px;
+      right: 24px;
+      background: transparent;
+      color: white;
+      border: 0;
+      font-size: 2.3rem;
+      cursor: pointer;
+    }
+
+    @media (max-width: 900px) {
+      .gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .award-card {
+        grid-column: span 2;
+      }
+
+      .nav-container {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .hero {
+        padding: 52px 20px;
+      }
+
+      .gallery-section {
+        padding: 48px 20px;
+      }
+
+      .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .award-card {
+        grid-column: auto;
+        grid-template-columns: 1fr;
+      }
+
+      .award-card .image-button,
+      .award-card img {
+        min-height: 0;
+        height: auto;
+        max-height: 430px;
+      }
+
+      .gallery-card img {
+        height: auto;
+        max-height: 420px;
+        object-fit: contain;
+      }
+
+      .nav-container {
+        padding: 15px 20px;
+      }
+
+      .nav-links {
+        gap: 15px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <header class="site-header">
+    <nav class="nav-container" aria-label="Main navigation">
+      <a class="brand" href="index.html">RICHA RANJAN</a>
+
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="gallery.html" class="active" aria-current="page">Beyond the Lab</a>
+        <a href="index.html#publications">Publications</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- Page introduction -->
+    <section class="hero">
+      <div class="hero-inner">
+        <p class="eyebrow">BEYOND THE LAB</p>
+
+        <h1>My interests, skills &amp; connections<span>.</span></h1>
+
+        <p class="hero-description">
+          A personal space to share the things I enjoy, the skills I develop,
+          and the people and experiences that inspire me. Celebrating the
+          achievements, friendships and memories that make the journey meaningful.
+        </p>
+
+        <div class="hero-actions">
+          <a class="button" href="#achievements">Explore achievements</a>
+          <a class="button button-outline" href="#memories">Browse memories</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Professional achievements -->
+    <section class="gallery-section" id="achievements">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">MILESTONES &amp; RECOGNITION</p>
+          <h2>Professional achievements</h2>
+          <p>
+            Celebrating research contributions, academic recognition and
+            opportunities to share scientific work.
+          </p>
+        </div>
+
+        <div class="gallery-grid">
+
+          <!-- Award photograph -->
+          <article class="gallery-card award-card" data-category="professional">
+            <button class="image-button"
+                    type="button"
+                    data-lightbox
+                    aria-label="Enlarge Best Poster Presentation Award photograph">
+              <img src="best-poster-award.jpg"
+                   alt="Richa Ranjan presenting her research poster at IISER Bhopal"
+                   loading="lazy">
+              <span class="image-hint">View photo ↗</span>
+            </button>
+
+            <div class="card-content">
+              <span class="award-label">Academic recognition</span>
+              <p class="card-category">Professional achievement</p>
+              <h3>Best Poster Presentation Award</h3>
+              <p>
+                Richa Ranjan received the Best Poster Presentation Award
+                for presenting her research at the 4th National Conference
+                on Advances in Chemical Engineering and Science, organized
+                by the Department of Chemical Engineering, IISER Bhopal, India.
+              </p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Research community and conference photographs -->
+    <section class="gallery-section alternate" id="memories">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">PEOPLE, PLACES &amp; EXPERIENCES</p>
+          <h2>Research community &amp; conference memories</h2>
+          <p>
+            Scientific exchange is about more than research: it is also
+            about meeting people, sharing ideas and building lasting connections.
+          </p>
+        </div>
+
+        <!-- Gallery filters -->
+        <div class="filter-bar" role="group" aria-label="Filter gallery">
+          <button class="filter-button active" type="button" data-filter="all"
+                  aria-pressed="true">All memories</button>
+          <button class="filter-button" type="button" data-filter="professional"
+                  aria-pressed="false">Professional</button>
+          <button class="filter-button" type="button" data-filter="conference"
+                  aria-pressed="false">Conferences</button>
+          <button class="filter-button" type="button" data-filter="personal"
+                  aria-pressed="false">Personal moments</button>
+        </div>
+
+        <div class="gallery-grid">
+
+          <!-- ICISE group photograph -->
+          <article class="gallery-card" data-category="conference">
+            <button class="image-button"
+                    type="button"
+                    data-lightbox
+                    aria-label="Enlarge international research community photograph">
+              <img src="icise-research-community.jpeg"
+                   alt="Researchers gathered outside the ICISE building in Quy Nhon, Vietnam"
+                   loading="lazy">
+              <span class="image-hint">View photo ↗</span>
+            </button>
+
+            <div class="card-content">
+              <p class="card-category">Conferences &amp; networking</p>
+              <h3>International Research Community</h3>
+              <p>
+                A gathering of researchers and scientists at the
+                International Centre for Interdisciplinary Science and
+                Education (ICISE), Quy Nhon, Vietnam.
+              </p>
+            </div>
+          </article>
+
+          <!-- Small group photograph -->
+          <article class="gallery-card" data-category="conference">
+            <button class="image-button"
+                    type="button"
+                    data-lightbox
+                    aria-label="Enlarge research colleagues photograph">
+              <img src="conference-researchers.jpeg"
+                   alt="Richa Ranjan and fellow researchers at a conference venue"
+                   loading="lazy">
+              <span class="image-hint">View photo ↗</span>
+            </button>
+
+            <div class="card-content">
+              <p class="card-category">Research connections</p>
+              <h3>Scientific Exchange &amp; Collaboration</h3>
+              <p>
+                Connecting with fellow researchers and scientists,
+                exchanging experiences and celebrating the research community.
+              </p>
+            </div>
+          </article>
+
+          <!-- Conference dinner photograph -->
+          <article class="gallery-card" data-category="personal">
+            <button class="image-button"
+                    type="button"
+                    data-lightbox
+                    aria-label="Enlarge conference dinner photograph">
+              <img src="conference-dinner.jpeg"
+                   alt="Research colleagues sharing a meal and enjoying time together"
+                   loading="lazy">
+              <span class="image-hint">View photo ↗</span>
+            </button>
+
+            <div class="card-content">
+              <p class="card-category">Personal moments</p>
+              <h3>Beyond the Conference Hall</h3>
+              <p>
+                Conversations, laughter and memorable moments with
+                colleagues outside the formal research programme.
+              </p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- More photos and videos can be added here -->
+    <section class="gallery-section" id="more-moments">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">LIFE BEYOND RESEARCH</p>
+          <h2>More moments to come.</h2>
+          <p>
+            Travel, new experiences, personal milestones and favourite
+            memories can all find a place here as the gallery grows.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Closing section -->
+    <section class="closing-section">
+      <div class="container">
+        <h2>Every achievement has a story.</h2>
+        <p>
+          From research milestones to the people and experiences along the way,
+          these moments are part of a continuing journey of learning and discovery.
+        </p>
+        <a class="button" href="index.html">← Back to academic profile</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Richa Ranjan · Beyond the Lab</p>
+  </footer>
+
+  <!-- Click-to-enlarge image viewer -->
+  <div class="lightbox"
+       id="lightbox"
+       role="dialog"
+       aria-modal="true"
+       aria-label="Enlarged gallery image"
+       aria-hidden="true">
+
+    <button class="lightbox-close"
+            type="button"
+            aria-label="Close enlarged image">&times;</button>
+
+    <div class="lightbox-content">
+      <img id="lightbox-image" src="" alt="">
+      <p class="lightbox-caption" id="lightbox-caption"></p>
+    </div>
+  </div>
+
+  <script>
+    // Automatically display the current year.
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Filter gallery cards by category.
+    const filterButtons = document.querySelectorAll(".filter-button");
+    const galleryCards = document.querySelectorAll(".gallery-card");
+
+    filterButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const selectedFilter = button.dataset.filter;
+
+        filterButtons.forEach((item) => {
+          const selected = item === button;
+          item.classList.toggle("active", selected);
+          item.setAttribute("aria-pressed", String(selected));
+        });
+
+        galleryCards.forEach((card) => {
+          const categories = card.dataset.category.split(" ");
+          card.hidden =
+            selectedFilter !== "all" &&
+            !categories.includes(selectedFilter);
+        });
+      });
+    });
+
+    // Click an image to enlarge it.
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImage = document.getElementById("lightbox-image");
+    const lightboxCaption = document.getElementById("lightbox-caption");
+    const closeButton = document.querySelector(".lightbox-close");
+    let previouslyFocusedElement = null;
+
+    function closeLightbox() {
+      lightbox.classList.remove("open");
+      lightbox.setAttribute("aria-hidden", "true");
+      lightboxImage.src = "";
+      document.body.style.overflow = "";
+
+      if (previouslyFocusedElement) {
+        previouslyFocusedElement.focus();
+      }
+    }
+
+    document.querySelectorAll("[data-lightbox]").forEach((button) => {
+      button.addEventListener("click", () => {
+        const image = button.querySelector("img");
+
+        if (!image || !image.complete || image.naturalWidth === 0) {
+          return;
+        }
+
+        previouslyFocusedElement = button;
+        lightboxImage.src = image.src;
+        lightboxImage.alt = image.alt;
+        lightboxCaption.textContent =
+          button.closest(".gallery-card")
+            .querySelector("h3")?.textContent || image.alt;
+
+        lightbox.classList.add("open");
+        lightbox.setAttribute("aria-hidden", "false");
+        document.body.style.overflow = "hidden";
+        closeButton.focus();
+      });
+    });
+
+    closeButton.addEventListener("click", closeLightbox);
+
+    lightbox.addEventListener("click", (event) => {
+      if (event.target === lightbox) {
+        closeLightbox();
+      }
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && lightbox.classList.contains("open")) {
+        closeLightbox();
+      }
+    });
+  </script>
+
+</body>
+</html>
