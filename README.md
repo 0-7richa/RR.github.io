@@ -36,3 +36,9 @@ This is a static website. The contact email link opens the visitor's email appli
 
 ## CV details included
 Education, thesis topics, work experience, technical skills, teaching assistantship, research interests, fellowships and funding, conference presentations/workshops, languages, strengths, publications, and academic references have been added from the supplied CV. Verify referee consent before publishing their contact details publicly.
+
+
+## Personal profile section
+The homepage includes a personal narrative section and a portrait placeholder. Replace the placeholder in `index.html` with a real portrait when ready; no image has been invented or added.
+
+The Personal Profile now includes a portrait, a travel photograph, and linked cards for travel, personal skills/creativity, and meaningful connections. Replace or expand the text and photos in `index.html` and the `assets/` folder as desired. Only publish photographs or details about other people with their permission.
