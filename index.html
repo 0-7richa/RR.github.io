@@ -83,6 +83,76 @@
   .home-page .nav-links { background:#34264F !important; border-color:#65518A !important; }
   .home-page .menu-toggle { color:#FFFFFF !important; }
 }
+
+/* Collaboration form — wider, balanced, and scoped to index.html only */
+.home-page #collaborate.collaboration-form-wrap {
+  width: min(calc(100% - 64px), 1120px) !important;
+  max-width: 1120px !important;
+  margin: 46px auto 0 !important;
+  padding: 0 0 64px !important;
+  box-sizing: border-box !important;
+  position: relative !important;
+}
+.home-page #collaborate .collaboration-form {
+  width: 100% !important;
+  max-width: none !important;
+  box-sizing: border-box !important;
+  padding: clamp(28px, 4vw, 48px) !important;
+  border: 1px solid rgba(194,184,213,.42) !important;
+  border-radius: 18px !important;
+  background: linear-gradient(135deg, #3A2A55 0%, #34264F 58%, #44315F 100%) !important;
+  box-shadow: 0 24px 60px rgba(19, 10, 33, .24), inset 0 1px 0 rgba(255,255,255,.06) !important;
+}
+.home-page #collaborate .collaboration-form .form-eyebrow { font-size: 10px !important; letter-spacing: .14em !important; }
+.home-page #collaborate .collaboration-form h3 { font-size: clamp(28px, 3vw, 38px) !important; line-height: 1.2 !important; }
+.home-page #collaborate .collaboration-form .form-subtitle { font-size: 17px !important; }
+.home-page #collaborate .collaboration-form .form-intro { max-width: 760px !important; font-size: 14px !important; line-height: 1.8 !important; }
+.home-page #collaborate .collaboration-form .form-divider { margin: 22px 0 !important; background: rgba(194,184,213,.32) !important; }
+.home-page #collaborate .collaboration-form > label,
+.home-page #collaborate .collaboration-form .enquiry-types legend { font-size: 13px !important; }
+.home-page #collaborate .collaboration-form input[type="text"],
+.home-page #collaborate .collaboration-form input[type="email"],
+.home-page #collaborate .collaboration-form textarea {
+  font-size: 14px !important;
+  padding: 13px 16px !important;
+  border-color: rgba(194,184,213,.42) !important;
+  background: rgba(255,255,255,.055) !important;
+}
+.home-page #collaborate .collaboration-form textarea { min-height: 150px !important; }
+.home-page #collaborate .collaboration-form .enquiry-types { margin: 16px 0 20px !important; }
+.home-page #collaborate .collaboration-form .enquiry-types label { font-size: 13px !important; margin: 9px 0 !important; }
+.home-page #collaborate .collaboration-form .collaboration-submit { min-height: 50px !important; font-size: 13px !important; border-radius: 26px !important; margin-top: 20px !important; }
+.home-page #collaborate .collaboration-form .form-privacy { font-size: 11px !important; }
+@media (min-width: 900px) {
+  .home-page #collaborate .collaboration-form {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+    column-gap: 28px !important;
+    align-items: start !important;
+  }
+  .home-page #collaborate .collaboration-form > .form-eyebrow,
+  .home-page #collaborate .collaboration-form > h3,
+  .home-page #collaborate .collaboration-form > .form-subtitle,
+  .home-page #collaborate .collaboration-form > .form-intro,
+  .home-page #collaborate .collaboration-form > .form-divider,
+  .home-page #collaborate .collaboration-form > .enquiry-types,
+  .home-page #collaborate .collaboration-form > #collab-message,
+  .home-page #collaborate .collaboration-form > label[for="collab-message"],
+  .home-page #collaborate .collaboration-form > input[type="hidden"],
+  .home-page #collaborate .collaboration-form > .collaboration-submit,
+  .home-page #collaborate .collaboration-form > .form-privacy { grid-column: 1 / -1 !important; }
+  .home-page #collaborate .collaboration-form > label[for="collab-name"] { grid-column: 1 !important; grid-row: 6 !important; }
+  .home-page #collaborate .collaboration-form > #collab-name { grid-column: 1 !important; grid-row: 7 !important; }
+  .home-page #collaborate .collaboration-form > label[for="collab-email"] { grid-column: 2 !important; grid-row: 6 !important; }
+  .home-page #collaborate .collaboration-form > #collab-email { grid-column: 2 !important; grid-row: 7 !important; }
+  .home-page #collaborate .collaboration-form > label[for="collab-institution"] { grid-column: 1 / -1 !important; }
+  .home-page #collaborate .collaboration-form > #collab-institution { grid-column: 1 / -1 !important; }
+}
+@media (max-width: 700px) {
+  .home-page #collaborate.collaboration-form-wrap { width: calc(100% - 32px) !important; margin-top: 28px !important; padding-bottom: 32px !important; }
+  .home-page #collaborate .collaboration-form { padding: 24px 20px !important; border-radius: 14px !important; }
+}
+
 </style>
 
 </head>
