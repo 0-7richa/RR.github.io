@@ -15,33 +15,6 @@
         content="Explore Richa Ranjan's professional achievements, research community, conference memories and personal interests.">
 
   <style>
-    
-/* Keep the portrait and decorative border aligned */
-.hero-portrait,
-.portrait-frame {
-  position: relative;
-  border-radius: 48% 48% 18px 18px;
-  overflow: hidden;
-  isolation: isolate;
-}
-
-.hero-portrait img,
-.portrait-frame img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: inherit;
-}
-
-/* Remove any decorative outline extending outside */
-.hero-portrait::before,
-.hero-portrait::after,
-.portrait-frame::before,
-.portrait-frame::after {
-  display: none !important;
-}
-
     :root {
       --purple: #34264F;
       --purple-light: #65518A;
@@ -850,6 +823,50 @@
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; }
       .js-reveal { opacity: 1; transform: none; }
+    }
+
+
+
+    /* Portrait frame alignment fix: keep the border fully inside the image area */
+    .hero-portrait-wrap {
+      position: relative;
+      width: min(100%, 390px);
+      justify-self: end;
+      isolation: isolate;
+      padding: 0;
+      overflow: visible;
+    }
+
+    .hero-portrait-wrap::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border: 2px solid #B8A9D0;
+      border-radius: 180px 180px 22px 22px;
+      transform: none !important;
+      animation: none !important;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .hero-portrait {
+      position: relative;
+      z-index: 1;
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      object-position: center 35%;
+      border-radius: 180px 180px 22px 22px;
+      margin: 0;
+    }
+
+    @media (max-width: 900px) {
+      .hero-portrait-wrap {
+        justify-self: center;
+        width: min(82%, 340px);
+      }
     }
 
   </style>
