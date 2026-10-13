@@ -595,3 +595,181 @@ nav a, .nav-links a, .button, .btn { font-size: 1rem; }
     width: 100%;
   }
 }
+
+/* === Collaboration form: compact, legible card matching the approved reference === */
+.home-page #collaborate.collaboration-form-wrap {
+  width: min(100% - 48px, 420px) !important;
+  max-width: 420px !important;
+  margin: 0 auto !important;
+  padding: 0 0 42px !important;
+  color: #F8F5FC !important;
+}
+.home-page #collaborate .collaboration-form {
+  display: block !important;
+  width: 100% !important;
+  max-width: 420px !important;
+  margin: 0 auto !important;
+  padding: 18px 16px 16px !important;
+  border: 1px solid #65518A !important;
+  border-radius: 7px !important;
+  background: #34264F !important;
+  color: #F8F5FC !important;
+  box-shadow: 0 12px 28px rgba(28, 17, 43, .16) !important;
+  font-family: var(--sans, "DM Sans", sans-serif) !important;
+  font-size: 12px !important;
+  line-height: 1.5 !important;
+}
+.home-page #collaborate .collaboration-form .form-eyebrow {
+  display: block !important;
+  margin: 0 0 8px !important;
+  color: #D9CDE8 !important;
+  font-size: 7px !important;
+  line-height: 1.5 !important;
+  font-weight: 800 !important;
+  letter-spacing: .04em !important;
+}
+.home-page #collaborate .collaboration-form h3 {
+  display: block !important;
+  margin: 0 0 5px !important;
+  color: #FFFFFF !important;
+  font-family: var(--display, "Manrope", sans-serif) !important;
+  font-size: 16px !important;
+  line-height: 1.35 !important;
+  font-weight: 800 !important;
+  letter-spacing: -.025em !important;
+}
+.home-page #collaborate .collaboration-form .form-subtitle {
+  display: block !important;
+  margin: 0 0 8px !important;
+  color: #C2B8D5 !important;
+  font-size: 11px !important;
+  line-height: 1.5 !important;
+  font-weight: 700 !important;
+}
+.home-page #collaborate .collaboration-form .form-intro {
+  display: block !important;
+  max-width: none !important;
+  margin: 0 !important;
+  color: #F0EAF7 !important;
+  font-size: 9px !important;
+  line-height: 1.7 !important;
+  font-weight: 400 !important;
+}
+.home-page #collaborate .collaboration-form .form-divider {
+  display: block !important;
+  height: 1px !important;
+  margin: 12px 0 !important;
+  background: #65518A !important;
+}
+.home-page #collaborate .collaboration-form > label {
+  display: block !important;
+  width: 100% !important;
+  margin: 10px 0 4px !important;
+  color: #F5F1FA !important;
+  font-size: 9px !important;
+  line-height: 1.4 !important;
+  font-weight: 700 !important;
+}
+.home-page #collaborate .collaboration-form > label span { color: #C2B8D5 !important; }
+.home-page #collaborate .collaboration-form input[type="text"],
+.home-page #collaborate .collaboration-form input[type="email"],
+.home-page #collaborate .collaboration-form textarea {
+  display: block !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  height: auto !important;
+  margin: 0 !important;
+  padding: 7px 10px !important;
+  border: 1px solid #65518A !important;
+  border-radius: 18px !important;
+  background: #3B2B56 !important;
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+  font-family: var(--sans, "DM Sans", sans-serif) !important;
+  font-size: 9px !important;
+  line-height: 1.45 !important;
+  box-shadow: none !important;
+}
+.home-page #collaborate .collaboration-form input::placeholder,
+.home-page #collaborate .collaboration-form textarea::placeholder {
+  color: #C2B8D5 !important;
+  -webkit-text-fill-color: #C2B8D5 !important;
+  opacity: .95 !important;
+}
+.home-page #collaborate .collaboration-form textarea {
+  min-height: 82px !important;
+  border-radius: 5px !important;
+  resize: vertical !important;
+}
+.home-page #collaborate .collaboration-form .enquiry-types {
+  display: block !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  margin: 10px 0 10px !important;
+  padding: 0 !important;
+  border: 0 !important;
+}
+.home-page #collaborate .collaboration-form .enquiry-types legend {
+  display: block !important;
+  margin: 0 0 4px !important;
+  padding: 0 !important;
+  color: #F5F1FA !important;
+  font-size: 9px !important;
+  font-weight: 700 !important;
+}
+.home-page #collaborate .collaboration-form .enquiry-types label {
+  display: flex !important;
+  width: 100% !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  gap: 7px !important;
+  margin: 5px 0 !important;
+  color: #F5F1FA !important;
+  font-size: 9px !important;
+  line-height: 1.4 !important;
+  font-weight: 400 !important;
+}
+.home-page #collaborate .collaboration-form .enquiry-types input[type="radio"] {
+  display: inline-block !important;
+  width: 13px !important;
+  height: 13px !important;
+  min-width: 13px !important;
+  margin: 0 !important;
+  accent-color: #C2B8D5 !important;
+}
+.home-page #collaborate .collaboration-form .collaboration-submit {
+  display: flex !important;
+  width: 100% !important;
+  min-height: 34px !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin: 12px 0 0 !important;
+  padding: 8px 12px !important;
+  border: 1px solid #C2B8D5 !important;
+  border-radius: 18px !important;
+  background: #F0EDF5 !important;
+  color: #34264F !important;
+  font-family: var(--sans, "DM Sans", sans-serif) !important;
+  font-size: 10px !important;
+  line-height: 1.4 !important;
+  font-weight: 800 !important;
+  box-shadow: none !important;
+  cursor: pointer !important;
+}
+.home-page #collaborate .collaboration-form .collaboration-submit:hover {
+  background: #C2B8D5 !important;
+  transform: translateY(-1px) !important;
+}
+.home-page #collaborate .collaboration-form .form-privacy {
+  display: block !important;
+  margin: 10px 0 0 !important;
+  color: #D9CDE8 !important;
+  font-size: 7px !important;
+  line-height: 1.5 !important;
+}
+@media (max-width: 700px) {
+  .home-page #collaborate.collaboration-form-wrap {
+    width: min(100% - 34px, 420px) !important;
+    padding-bottom: 30px !important;
+  }
+}
