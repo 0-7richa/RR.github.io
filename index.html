@@ -10,8 +10,83 @@
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
 <link href="styles.css" rel="stylesheet"/>
+
+<style>
+/* INDEX PAGE ONLY: readable deep-purple and silver palette */
+.home-page { background:#EDE8F3 !important; color:#29213A; }
+.home-page .site-header { background:rgba(52,38,79,.97) !important; border-bottom:1px solid #65518A !important; }
+.home-page .site-header .brand,
+.home-page .site-header .nav-links { color:#F5F1FA !important; }
+.home-page .brand-mark { background:#C2B8D5 !important; color:#34264F !important; }
+.home-page .nav-links a:hover { color:#C2B8D5 !important; }
+.home-page .nav-links .nav-contact { background:#C2B8D5 !important; color:#34264F !important; }
+.home-page .hero { background:radial-gradient(ellipse at 82% 38%,rgba(194,184,213,.58),transparent 43%),linear-gradient(135deg,#34264F 0%,#49365F 58%,#65518A 100%) !important; color:#F8F5FC !important; }
+.home-page .hero h1,
+.home-page .hero .hero-intro { color:#F8F5FC !important; }
+.home-page .hero h1 span { color:#C2B8D5 !important; }
+.home-page .hero .eyebrow { color:#D9CDE8 !important; }
+.home-page .hero .hero-tags span { color:#F4EFF9 !important; border-color:#9C8AB7 !important; background:rgba(255,255,255,.07) !important; }
+.home-page .hero .art-caption { color:#F0EAF7 !important; }
+.home-page .hero-bottom { color:#D9CDE8 !important; border-color:rgba(194,184,213,.45) !important; }
+.home-page .intro-strip { background:linear-gradient(110deg,#C2B8D5,#E0D8EA) !important; color:#34264F !important; }
+.home-page .intro-strip p,
+.home-page .intro-strip h2 { color:#34264F !important; }
+.home-page .section-light { background:linear-gradient(135deg,#F2EFF7,#E5DFED) !important; }
+.home-page .research-section,
+.home-page .achievements-section,
+.home-page .personal-section { background:linear-gradient(135deg,#E7E0EF,#F2EFF7) !important; }
+.home-page .section-title,
+.home-page .section-heading h2,
+.home-page .subsection-title { color:#34264F !important; }
+.home-page .section-title span,
+.home-page .accent-dot { color:#8069A1 !important; }
+.home-page .eyebrow { color:#65518A !important; }
+.home-page .body-copy,
+.home-page .section-lead { color:#51465F !important; }
+.home-page .research-card,
+.home-page .skill-card,
+.home-page .publication,
+.home-page .references-grid article,
+.home-page .event-list article,
+.home-page .research-question { background:linear-gradient(145deg,#F9F7FB,#E2DAEC) !important; border-color:#C2B8D5 !important; color:#34264F !important; box-shadow:0 8px 24px rgba(52,38,79,.08) !important; }
+.home-page .research-card h3,
+.home-page .skill-card h3,
+.home-page .publication h3,
+.home-page .references-grid h3,
+.home-page .event-list h3,
+.home-page .research-question h3 { color:#34264F !important; }
+.home-page .research-card p,
+.home-page .skill-card p,
+.home-page .publication p,
+.home-page .references-grid p,
+.home-page .event-list p,
+.home-page .research-question p { color:#594F67 !important; }
+.home-page .card-number { color:#65518A !important; }
+.home-page .card-tags span { background:#E5DDED !important; color:#49365F !important; border-color:#C2B8D5 !important; }
+.home-page .button-primary,
+.home-page .scholar-callout .button { background:#34264F !important; color:#FFFFFF !important; border-color:#34264F !important; }
+.home-page .button-secondary { color:#34264F !important; border-color:#8D7BA7 !important; }
+.home-page .contact-section { background:linear-gradient(135deg,#241833 0%,#34264F 55%,#49365F 100%) !important; color:#F8F5FC !important; }
+.home-page .contact-section .eyebrow,
+.home-page .contact-section .contact-label { color:#D7CBE6 !important; }
+.home-page .contact-section .section-title,
+.home-page .contact-section .contact-row strong { color:#FFFFFF !important; }
+.home-page .contact-section .contact-intro,
+.home-page .contact-section .contact-warning { color:#E0D7EB !important; }
+.home-page .contact-panel { background:rgba(255,255,255,.045) !important; border-color:#806B9C !important; }
+.home-page .contact-row { border-color:#65518A !important; }
+.home-page .contact-row span { color:#D7CBE6 !important; }
+.home-page .contact-row:hover strong { color:#C2B8D5 !important; }
+.home-page .site-footer { background:#241833 !important; color:#E6DDED !important; }
+.home-page ::selection { background:#65518A; color:#FFFFFF; }
+@media(max-width:700px) {
+  .home-page .nav-links { background:#34264F !important; border-color:#65518A !important; }
+  .home-page .menu-toggle { color:#FFFFFF !important; }
+}
+</style>
+
 </head>
-<body>
+<body class="home-page">
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
 <nav aria-label="Main navigation" class="nav container">
