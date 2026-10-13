@@ -84,96 +84,6 @@
   .home-page .menu-toggle { color:#FFFFFF !important; }
 }
 
-/* Combined About + Personal Profile section */
-.home-page .about-combined-grid {
-  display: grid;
-  grid-template-columns: minmax(0, .92fr) minmax(0, 1.08fr);
-  gap: clamp(36px, 6vw, 84px);
-  align-items: start;
-}
-.home-page .about-combined-visual .section-title {
-  max-width: 620px;
-  margin-bottom: 28px;
-  font-size: clamp(34px, 4.1vw, 54px);
-  line-height: 1.08;
-  letter-spacing: -.045em;
-}
-.home-page .about-portrait {
-  margin: 30px 0 0;
-  max-width: 310px;
-}
-.home-page .about-portrait img {
-  display: block;
-  width: 100%;
-  max-height: 390px;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
-  object-position: center;
-  border: 1px solid #D6CDE2;
-  background: #F9F7FB;
-}
-.home-page .about-portrait figcaption {
-  margin-top: 10px;
-  color: #65518A;
-  font-size: 12px;
-  letter-spacing: .02em;
-}
-.home-page .about-combined-copy {
-  padding-top: 34px;
-}
-.home-page .about-combined-copy p {
-  margin: 0 0 18px;
-  line-height: 1.85;
-}
-.home-page .about-combined-copy .personal-values {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 14px;
-  margin: 28px 0;
-}
-.home-page .about-combined-copy .personal-values > div {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 16px;
-  background: rgba(255,255,255,.48);
-  border: 1px solid #D6CDE2;
-  border-radius: 12px;
-}
-.home-page .about-combined-copy .personal-values strong,
-.home-page .about-combined-copy .personal-values small {
-  display: block;
-}
-.home-page .about-combined-copy .personal-values strong {
-  color: #34264F;
-  margin-bottom: 4px;
-}
-.home-page .about-combined-copy .personal-values small {
-  color: #65518A;
-  line-height: 1.5;
-}
-.home-page .about-combined-copy .value-symbol {
-  display: grid;
-  place-items: center;
-  flex: 0 0 34px;
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  background: #E0D8EA;
-  color: #49365F;
-}
-@media (max-width: 800px) {
-  .home-page .about-combined-grid {
-    grid-template-columns: 1fr;
-    gap: 28px;
-  }
-  .home-page .about-combined-copy { padding-top: 0; }
-  .home-page .about-portrait { max-width: 280px; }
-}
-@media (max-width: 520px) {
-  .home-page .about-combined-copy .personal-values { grid-template-columns: 1fr; }
-}
-
 /* Collaboration form — wider, balanced, and scoped to index.html only */
 .home-page #collaborate.collaboration-form-wrap {
   width: min(calc(100% - 64px), 1120px) !important;
@@ -243,6 +153,61 @@
   .home-page #collaborate .collaboration-form { padding: 24px 20px !important; border-radius: 14px !important; }
 }
 
+
+/* Compact clickable profile icons placed beneath the collaboration form */
+.home-page .social-links-wrap {
+  width: min(calc(100% - 64px), 1120px);
+  margin: 0 auto;
+  padding: 8px 0 54px;
+  text-align: center;
+}
+.home-page .social-links-heading {
+  margin: 0 0 20px;
+  color: #D7CBE6;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .18em;
+}
+.home-page .social-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 22px 30px;
+}
+.home-page .social-link {
+  display: flex;
+  min-width: 92px;
+  flex-direction: column;
+  align-items: center;
+  gap: 9px;
+  color: #F3EDF9;
+  font-size: 12px;
+  text-decoration: none;
+  transition: transform .2s ease, color .2s ease;
+}
+.home-page .social-link:hover { color: #C2B8D5; transform: translateY(-3px); }
+.home-page .social-icon {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  border: 1px solid rgba(194,184,213,.55);
+  border-radius: 50%;
+  background: rgba(255,255,255,.07);
+  color: #F8F5FC;
+  transition: background .2s ease, border-color .2s ease;
+}
+.home-page .social-link:hover .social-icon { background: #65518A; border-color: #C2B8D5; }
+.home-page .social-icon svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.home-page .social-letter { font-size: 16px; font-weight: 700; letter-spacing: -.04em; }
+@media (max-width: 700px) {
+  .home-page .social-links-wrap { width: calc(100% - 32px); padding: 4px 0 36px; }
+  .home-page .social-links { gap: 20px 16px; }
+  .home-page .social-link { min-width: 84px; font-size: 11px; }
+  .home-page .social-icon { width: 44px; height: 44px; }
+}
+
 </style>
 
 </head>
@@ -288,23 +253,19 @@
 <h2>How do we <em>design</em> materials—and understand why they work?</h2>
 </div>
 </section>
-<section class="section section-light about-combined" id="about">
-  <div class="container about-combined-grid">
-    <div class="about-combined-visual">
-      <p class="eyebrow">01 / ABOUT</p>
-      <h2 class="section-title">Chemical engineering research at the intersection of <span>materials and environmental engineering.</span></h2>
-      <figure class="about-portrait">
-        <img src="1q.jpg" alt="Richa Ranjan — professional portrait" loading="lazy">
-        <figcaption>Professional Picture</figcaption>
-      </figure>
-    </div>
-
-    <div class="body-copy about-combined-copy">
-      <p>I am a Chemical Engineer affiliated with the Department of Chemical Engineering at IIT Ropar. My research develops engineered adsorbents to remove industrial dyes and pharmaceutical contaminants from wastewater.</p>
-      <p>My work spans adsorbent synthesis, electrospinning, cellulose aerogels, magnetic nanofibrous materials, and material and surface characterization, linking material properties with adsorption performance.</p>
-      <p>Curiosity drives me to understand how materials are made and why they behave as they do. I value thoughtful experimentation, continuous learning, and open collaboration. Outside the laboratory, I enjoy travelling and discovering new places.</p>
-    </div>
-  </div>
+<section class="section section-light" id="about">
+<div class="container two-column">
+<div>
+<p class="eyebrow">01 / ABOUT</p>
+<h2 class="section-title">Chemical engineering research at the intersection of <span>materials and environmental engineering.</span></h2>
+</div>
+<div class="body-copy">
+<p>I am a Chemical Engineer and researcher affiliated with the Department of Chemical Engineering at the Indian Institute of Technology (IIT) Ropar. My research focuses on engineered adsorbents for the removal of industrial dyes and pharmaceutical contaminants from wastewater.</p>
+<p>I am committed to collaborative, intellectually stimulating work that encourages continuous learning, knowledge sharing, and professional growth. I approach complex research challenges with patience, perseverance, critical thinking, and a focus on developing meaningful and innovative solutions.</p>
+<p>My work combines adsorbent synthesis, electrospinning, cellulose aerogel development, magnetic nanofibrous materials, and material and surface characterization with adsorption performance analysis.</p>
+<a class="text-link" href="#contact">Connect about research collaboration <span>→</span></a>
+</div>
+</div>
 </section>
 
 <section class="section research-section" id="research">
@@ -383,9 +344,30 @@
 </div>
 </div>
 </section>
+<section class="section personal-section" id="personal">
+<div class="container personal-grid">
+<div class="personal-portrait-wrap">
+<div class="personal-portrait personal-portrait-photo">
+<img alt="Richa Ranjan outdoors" loading="lazy" src="1q.jpg"/>
+</div>
+<p class="portrait-caption">Professional Picture</p>
+</div>
+<div class="personal-copy">
+<p class="eyebrow">05 / PERSONAL PROFILE</p>
+<h2 class="section-title">The person behind <span>the research.</span></h2>
+<p>My journey in chemical engineering has been shaped by curiosity: a desire to understand how materials are made, why they behave the way they do, and how careful experimentation can turn questions into useful knowledge. Research has taught me to value patience, persistence, and the small discoveries that emerge when we look closely at a problem.</p>
+<p>I enjoy continuous learning and exploring ideas beyond my immediate field. I believe that new places, conversations, and perspectives can broaden the way we think, both as researchers and as people. I value collaborative environments where knowledge is shared openly and different experiences help shape better questions.</p>
+<p>Outside the laboratory, I enjoy travelling and discovering new places. I am still adding to this personal story, and this section can grow to include other interests, experiences, and moments that have influenced my journey.</p>
+<div class="personal-values">
+<div><span class="value-symbol">✳</span><span><strong>Curiosity</strong><small>Always asking, learning, and exploring</small></span></div>
+<div><span class="value-symbol">↗</span><span><strong>Discovery</strong><small>Finding fresh perspectives in new places</small></span></div>
+</div>
+</div>
+</div>
+</section>
 <section class="section section-light" id="presentations">
 <div class="container">
-<p class="eyebrow">05 / CONFERENCES &amp; PROFESSIONAL DEVELOPMENT</p>
+<p class="eyebrow">06 / CONFERENCES &amp; PROFESSIONAL DEVELOPMENT</p>
 <h2 class="section-title">Presentations, workshops <span>and training.</span></h2>
 <div class="event-list">
 <article><span>JUN 2024 · VIETNAM</span><h3>“Aerogel: An Innovative Adsorbent for wastewater treatment”</h3><p>Rencontres du Vietnam on Soft Matter, Fluids, Interfaces, ICISE, Quy Nhon, Vietnam, June 9–15, 2024. With Manigandan Sabapathy and Sarang P. Gumfekar.</p></article>
@@ -401,7 +383,7 @@
 </section>
 <section class="section achievements-section" id="additional">
 <div class="container two-column">
-<div><p class="eyebrow">06 / RESEARCH INTERESTS &amp; PERSONAL STRENGTHS</p><h2 class="section-title">Questions that guide <span>my research.</span></h2></div>
+<div><p class="eyebrow">07 / RESEARCH INTERESTS &amp; PERSONAL STRENGTHS</p><h2 class="section-title">Questions that guide <span>my research.</span></h2></div>
 <div class="body-copy">
   <div class="research-questions-content">
     <div class="research-question">
@@ -441,7 +423,7 @@
 </section>
 <section class="section section-light" id="references">
 <div class="container">
-<p class="eyebrow">07 / ACADEMIC REFERENCES</p>
+<p class="eyebrow">08 / ACADEMIC REFERENCES</p>
 <h2 class="section-title">Professional <span>references.</span></h2>
 <div class="references-grid">
 <article><h3>Dr. S. Manigandan</h3><p>Associate Professor, Department of Chemical Engineering</p><p><a href="mailto:mani@iitrpr.ac.in">mani@iitrpr.ac.in</a></p></article>
@@ -456,7 +438,7 @@
   <div class="container contact-grid">
 
     <div>
-      <p class="eyebrow eyebrow-light">08 / CONTACT</p>
+      <p class="eyebrow eyebrow-light">09 / CONTACT</p>
       <h2 class="section-title">
         Let’s connect<br />
         and <span>collaborate.</span>
@@ -467,53 +449,7 @@
       </p>
     </div>
 
-    <div class="contact-panel">
-      <p class="contact-label">PROFESSIONAL CONTACT</p>
-      <p class="contact-warning">
-        For professional enquiries, research discussions, and collaboration opportunities.
-      </p>
 
-      <a class="contact-row" href="mailto:rricha1994@gmail.com">
-        <span>Email</span>
-        <strong>rricha1994@gmail.com ↗</strong>
-      </a>
-
-      <a class="contact-row"
-         href="https://scholar.google.com/citations?user=g-ZQLxgAAAAJ&amp;hl=en"
-         target="_blank" rel="noopener noreferrer">
-        <span>Google Scholar</span>
-        <strong>View publications ↗</strong>
-      </a>
-
-      <a class="contact-row"
-         href="https://www.researchgate.net/profile/Richa-Ranjan-2"
-         target="_blank" rel="noopener noreferrer">
-        <span>ResearchGate</span>
-        <strong>View research profile ↗</strong>
-      </a>
-
-      <a class="contact-row"
-         href="https://orcid.org/0009-0003-4766-7355"
-         target="_blank" rel="noopener noreferrer">
-        <span>ORCID</span>
-        <strong>View researcher ID ↗</strong>
-      </a>
-
-      <a class="contact-row"
-         href="https://www.linkedin.com/"
-         target="_blank" rel="noopener noreferrer">
-        <span>LinkedIn</span>
-        <strong>View profile ↗</strong>
-      </a>
-
-<a class="contact-row"
-   href="https://sites.google.com/iitrpr.ac.in/manigandan/people?authuser=0"
-   target="_blank" rel="noopener noreferrer">
-  <span>Research Lab</span>
-  <strong>Advanced Colloid &amp; Interfacial Engineering Lab ↗</strong>
-</a>
-
-    </div>
   </div>
 
   <div class="container collaboration-form-wrap" id="collaborate">
@@ -548,6 +484,30 @@
       <button type="submit" class="collaboration-submit">Send enquiry <span aria-hidden="true">↗</span></button>
       <p class="form-privacy">Your details will be used to respond to this enquiry.</p>
     </form>
+  </div>
+
+  <div class="container social-links-wrap" aria-label="Professional and social profiles">
+    <p class="social-links-heading">FIND ME ONLINE</p>
+    <div class="social-links">
+      <a class="social-link" href="mailto:rricha1994@gmail.com" aria-label="Email Richa Ranjan" title="Email">
+        <span class="social-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg></span><span>Email</span>
+      </a>
+      <a class="social-link" href="https://scholar.google.com/citations?user=g-ZQLxgAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar profile" title="Google Scholar">
+        <span class="social-icon social-letter" aria-hidden="true">G</span><span>Google Scholar</span>
+      </a>
+      <a class="social-link" href="https://www.researchgate.net/profile/Richa-Ranjan-2" target="_blank" rel="noopener noreferrer" aria-label="ResearchGate profile" title="ResearchGate">
+        <span class="social-icon social-letter" aria-hidden="true">RG</span><span>ResearchGate</span>
+      </a>
+      <a class="social-link" href="https://orcid.org/0009-0003-4766-7355" target="_blank" rel="noopener noreferrer" aria-label="ORCID profile" title="ORCID">
+        <span class="social-icon social-letter" aria-hidden="true">iD</span><span>ORCID</span>
+      </a>
+      <a class="social-link" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn">
+        <span class="social-icon social-letter" aria-hidden="true">in</span><span>LinkedIn</span>
+      </a>
+      <a class="social-link" href="https://sites.google.com/iitrpr.ac.in/manigandan/people?authuser=0" target="_blank" rel="noopener noreferrer" aria-label="Advanced Colloid and Interfacial Engineering Lab" title="Research Lab">
+        <span class="social-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 2 3h10a2 2 0 0 0 2-3l-5-9V3"/><path d="M7 16h10"/></svg></span><span>Research Lab</span>
+      </a>
+    </div>
   </div>
 </section>
 
