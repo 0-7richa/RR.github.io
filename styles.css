@@ -386,3 +386,31 @@ nav a, .nav-links a, .button, .btn { font-size: 1rem; }
     font-size: 16px;
   }
 }
+
+/* Contact panel: improve readability of the right-side text only */
+.contact-panel .contact-label {
+  font-size: 12px;
+}
+.contact-panel .contact-warning {
+  font-size: 15px;
+  line-height: 1.8;
+}
+.contact-panel .contact-row {
+  font-size: 14px;
+  line-height: 1.6;
+}
+.contact-panel .contact-row strong {
+  font-size: 14px;
+}
+@media (max-width: 700px) {
+  .contact-panel .contact-label {
+    font-size: 11px;
+  }
+  .contact-panel .contact-warning {
+    font-size: 14px;
+  }
+  .contact-panel .contact-row,
+  .contact-panel .contact-row strong {
+    font-size: 12px;
+  }
+}
