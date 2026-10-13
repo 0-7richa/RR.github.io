@@ -96,7 +96,7 @@
 <button aria-controls="nav-links" aria-expanded="false" aria-label="Toggle navigation" class="menu-toggle">☰</button>
 <div class="nav-links" id="nav-links">
 <a href="#about">About</a><a href="#research">Research</a><a href="journey.html">Academic Journey</a>
-<a href="#publications">Publications</a><a href="#personal">Personal Profile</a><a href="gallery.html">Beyond the Lab</a><a class="nav-contact" href="#contact">Contact</a>
+<a href="#publications">Publications</a><a href="#personal">Personal Profile</a><a href="gallery.html">Beyond the Lab</a><a class="nav-contact" href="#contact">Contact</a><a class="nav-collaborate" href="#collaborate">Collaborate</a>
 </div>
 </nav>
 </header>
@@ -371,6 +371,40 @@
 </a>
 
     </div>
+  </div>
+
+  <div class="container collaboration-form-wrap" id="collaborate">
+    <form class="collaboration-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <p class="form-eyebrow">RESEARCH · COLLABORATION · INQUIRIES</p>
+      <h3>Have a research idea?</h3>
+      <p class="form-subtitle">Let’s explore it together.</p>
+      <p class="form-intro">For research collaborations, scientific discussions, academic opportunities, and questions about materials synthesis and environmental applications.</p>
+      <div class="form-divider"></div>
+
+      <label for="collab-name">Your name <span>*</span></label>
+      <input id="collab-name" name="name" type="text" placeholder="First and last name" autocomplete="name" required>
+
+      <label for="collab-email">Email address <span>*</span></label>
+      <input id="collab-email" name="email" type="email" placeholder="you@institution.edu" autocomplete="email" required>
+
+      <label for="collab-institution">Institution / organisation</label>
+      <input id="collab-institution" name="institution" type="text" placeholder="University, research lab or company" autocomplete="organization">
+
+      <fieldset class="enquiry-types">
+        <legend>Enquiry type</legend>
+        <label><input type="radio" name="enquiry_type" value="Research collaboration" checked> <span>Research collaboration</span></label>
+        <label><input type="radio" name="enquiry_type" value="Academic opportunity"> <span>Academic opportunity</span></label>
+        <label><input type="radio" name="enquiry_type" value="Scientific discussion"> <span>Scientific discussion</span></label>
+        <label><input type="radio" name="enquiry_type" value="Other enquiry"> <span>Other enquiry</span></label>
+      </fieldset>
+
+      <label for="collab-message">Your message <span>*</span></label>
+      <textarea id="collab-message" name="message" rows="5" placeholder="Briefly describe your idea or enquiry..." required></textarea>
+
+      <input type="hidden" name="_subject" value="New research enquiry from Richa Ranjan's website">
+      <button type="submit" class="collaboration-submit">Send enquiry <span aria-hidden="true">↗</span></button>
+      <p class="form-privacy">Your details will be used to respond to this enquiry.</p>
+    </form>
   </div>
 </section>
 

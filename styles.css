@@ -414,3 +414,184 @@ nav a, .nav-links a, .button, .btn { font-size: 1rem; }
     font-size: 12px;
   }
 }
+
+/* Collaborate navigation link */
+.nav-links .nav-collaborate {
+  color: #34264F;
+  background: #C2B8D5;
+  border: 1px solid #C2B8D5;
+  border-radius: 3px;
+  padding: 10px 14px;
+  font-weight: 700;
+}
+.home-page .nav-links .nav-collaborate {
+  color: #34264F !important;
+  background: #C2B8D5 !important;
+}
+.nav-links .nav-collaborate:hover {
+  background: #E5DDED !important;
+  color: #34264F !important;
+}
+
+/* Research collaboration form inside the Contact section */
+.collaboration-form-wrap {
+  padding-top: 36px;
+}
+.collaboration-form {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: clamp(22px, 4vw, 42px);
+  color: #F8F5FC;
+  background: linear-gradient(145deg, #34264F 0%, #2A1E3F 100%);
+  border: 1px solid #65518A;
+  border-radius: 12px;
+  box-shadow: 0 20px 55px rgba(15, 8, 27, .22);
+}
+.collaboration-form .form-eyebrow {
+  margin: 0 0 14px;
+  color: #C2B8D5;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .13em;
+}
+.collaboration-form h3 {
+  margin: 0 0 6px;
+  color: #FFFFFF;
+  font-family: var(--display, "Manrope", sans-serif);
+  font-size: clamp(28px, 4vw, 38px);
+  line-height: 1.2;
+  letter-spacing: -.04em;
+}
+.collaboration-form .form-subtitle {
+  margin: 0 0 12px;
+  color: #C2B8D5;
+  font-size: 18px;
+  font-weight: 700;
+}
+.collaboration-form .form-intro {
+  max-width: 680px;
+  margin: 0;
+  color: #E5DDEE;
+  font-size: 14px;
+  line-height: 1.8;
+}
+.collaboration-form .form-divider {
+  height: 1px;
+  margin: 24px 0;
+  background: #65518A;
+}
+.collaboration-form > label,
+.collaboration-form .enquiry-types legend {
+  display: block;
+  margin: 17px 0 7px;
+  color: #E8E0F1;
+  font-size: 13px;
+  font-weight: 700;
+}
+.collaboration-form > label span {
+  color: #C2B8D5;
+}
+.collaboration-form input[type="text"],
+.collaboration-form input[type="email"],
+.collaboration-form textarea {
+  display: block;
+  width: 100%;
+  padding: 13px 15px;
+  border: 1px solid #65518A;
+  border-radius: 9px;
+  outline: none;
+  background: #3B2B56;
+  color: #FFFFFF;
+  font: inherit;
+  font-size: 14px;
+  transition: border-color .2s ease, box-shadow .2s ease, background .2s ease;
+}
+.collaboration-form input::placeholder,
+.collaboration-form textarea::placeholder {
+  color: #C2B8D5;
+  opacity: .82;
+}
+.collaboration-form input[type="text"]:focus,
+.collaboration-form input[type="email"]:focus,
+.collaboration-form textarea:focus {
+  border-color: #C2B8D5;
+  box-shadow: 0 0 0 3px rgba(194,184,213,.16);
+  background: #42315F;
+}
+.collaboration-form textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+.collaboration-form .enquiry-types {
+  margin: 17px 0 8px;
+  padding: 0;
+  border: 0;
+}
+.collaboration-form .enquiry-types legend {
+  margin-top: 0;
+}
+.collaboration-form .enquiry-types label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+  color: #F0EAF7;
+  font-size: 14px;
+  cursor: pointer;
+}
+.collaboration-form .enquiry-types input[type="radio"] {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  accent-color: #C2B8D5;
+  flex: 0 0 auto;
+}
+.collaboration-form .collaboration-submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 20px;
+  padding: 14px 22px;
+  border: 1px solid #C2B8D5;
+  border-radius: 6px;
+  background: #C2B8D5;
+  color: #34264F;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform .2s ease, background .2s ease;
+}
+.collaboration-form .collaboration-submit:hover {
+  transform: translateY(-2px);
+  background: #E5DDED;
+}
+.collaboration-form .form-privacy {
+  margin: 14px 0 0;
+  color: #C2B8D5;
+  font-size: 11px;
+  line-height: 1.6;
+}
+#collaborate {
+  scroll-margin-top: 100px;
+}
+@media (max-width: 700px) {
+  .nav-links .nav-collaborate {
+    text-align: center;
+    margin-top: 8px;
+  }
+  .collaboration-form-wrap {
+    padding-top: 20px;
+  }
+  .collaboration-form {
+    padding: 22px 18px;
+    border-radius: 9px;
+  }
+  .collaboration-form .form-intro {
+    font-size: 13px;
+  }
+  .collaboration-form .collaboration-submit {
+    width: 100%;
+  }
+}
