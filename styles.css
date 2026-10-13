@@ -414,3 +414,63 @@ nav a, .nav-links a, .button, .btn { font-size: 1rem; }
     font-size: 12px;
   }
 }
+
+/* Purple and silver theme — INDEX PAGE ONLY */
+.home-page {
+  --purple: #34264F;
+  --purple-light: #65518A;
+  --silver: #C2B8D5;
+  --page-bg: #EDEAF3;
+  --card-bg: #F7F5FA;
+}
+
+.home-page {
+  background: var(--page-bg);
+}
+
+.home-page section {
+  border-color: #D6CDE2;
+}
+
+.home-page .section,
+.home-page section.section {
+  background-color: var(--page-bg);
+}
+
+.home-page .card,
+.home-page .research-card,
+.home-page .skill-card,
+.home-page .publication-card {
+  background: linear-gradient(145deg, #FFFFFF, #EAE5F1);
+  border-color: #D2C7E1;
+  box-shadow: 0 8px 24px rgba(52, 38, 79, 0.08);
+}
+
+.home-page h1,
+.home-page h2,
+.home-page h3 {
+  color: #34264F;
+}
+
+.home-page a {
+  transition: color 0.25s ease;
+}
+
+.home-page a:hover {
+  color: #8068A5;
+}
+
+.home-page .nav-contact,
+.home-page .button,
+.home-page button {
+  background-color: #34264F;
+  border-color: #34264F;
+  color: #FFFFFF;
+}
+
+.home-page .nav-contact:hover,
+.home-page .button:hover,
+.home-page button:hover {
+  background-color: #65518A;
+  border-color: #65518A;
+}
