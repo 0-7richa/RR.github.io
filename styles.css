@@ -773,3 +773,38 @@ nav a, .nav-links a, .button, .btn { font-size: 1rem; }
     padding-bottom: 30px !important;
   }
 }
+
+/* Final layout refinement: give the collaboration form room to sit naturally in the Contact section */
+.home-page #collaborate.collaboration-form-wrap {
+  width: min(calc(100% - 48px), 900px) !important;
+  max-width: 900px !important;
+  margin: 34px auto 0 !important;
+  padding: 0 0 48px !important;
+}
+.home-page #collaborate .collaboration-form {
+  width: 100% !important;
+  max-width: none !important;
+  padding: clamp(24px, 3.2vw, 38px) !important;
+  border-radius: 12px !important;
+}
+.home-page #collaborate .collaboration-form .form-eyebrow { font-size: 10px !important; }
+.home-page #collaborate .collaboration-form h3 { font-size: clamp(24px, 3vw, 32px) !important; }
+.home-page #collaborate .collaboration-form .form-subtitle { font-size: 15px !important; }
+.home-page #collaborate .collaboration-form .form-intro { font-size: 13px !important; }
+.home-page #collaborate .collaboration-form > label,
+.home-page #collaborate .collaboration-form .enquiry-types legend { font-size: 12px !important; }
+.home-page #collaborate .collaboration-form input[type="text"],
+.home-page #collaborate .collaboration-form input[type="email"],
+.home-page #collaborate .collaboration-form textarea { font-size: 13px !important; padding: 11px 14px !important; }
+.home-page #collaborate .collaboration-form textarea { min-height: 120px !important; }
+.home-page #collaborate .collaboration-form .enquiry-types label { font-size: 12px !important; margin: 8px 0 !important; }
+.home-page #collaborate .collaboration-form .collaboration-submit { min-height: 44px !important; font-size: 12px !important; }
+.home-page #collaborate .collaboration-form .form-privacy { font-size: 10px !important; }
+@media (max-width: 700px) {
+  .home-page #collaborate.collaboration-form-wrap {
+    width: calc(100% - 34px) !important;
+    margin-top: 24px !important;
+    padding-bottom: 30px !important;
+  }
+  .home-page #collaborate .collaboration-form { padding: 22px 18px !important; }
+}
