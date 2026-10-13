@@ -158,13 +158,13 @@
 .home-page .social-links-wrap {
   width: min(calc(100% - 64px), 1120px);
   margin: 0 auto;
-  padding: 8px 0 54px;
+  padding: 24px 0 64px;
   text-align: center;
 }
 .home-page .social-links-heading {
-  margin: 0 0 20px;
+  margin: 0 0 28px;
   color: #D7CBE6;
-  font-size: 10px;
+  font-size: 13px;
   font-weight: 700;
   letter-spacing: .18em;
 }
@@ -173,24 +173,24 @@
   flex-wrap: wrap;
   align-items: flex-start;
   justify-content: center;
-  gap: 22px 30px;
+  gap: 28px 44px;
 }
 .home-page .social-link {
   display: flex;
-  min-width: 92px;
+  min-width: 124px;
   flex-direction: column;
   align-items: center;
-  gap: 9px;
+  gap: 12px;
   color: #F3EDF9;
-  font-size: 12px;
+  font-size: 15px;
   text-decoration: none;
   transition: transform .2s ease, color .2s ease;
 }
 .home-page .social-link:hover { color: #C2B8D5; transform: translateY(-3px); }
 .home-page .social-icon {
   display: grid;
-  width: 48px;
-  height: 48px;
+  width: 68px;
+  height: 68px;
   place-items: center;
   border: 1px solid rgba(194,184,213,.55);
   border-radius: 50%;
@@ -199,13 +199,16 @@
   transition: background .2s ease, border-color .2s ease;
 }
 .home-page .social-link:hover .social-icon { background: #65518A; border-color: #C2B8D5; }
-.home-page .social-icon svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
-.home-page .social-letter { font-size: 16px; font-weight: 700; letter-spacing: -.04em; }
+.home-page .social-icon svg { width: 30px; height: 30px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.home-page .social-letter { font-size: 21px; font-weight: 700; letter-spacing: -.04em; }
 @media (max-width: 700px) {
-  .home-page .social-links-wrap { width: calc(100% - 32px); padding: 4px 0 36px; }
-  .home-page .social-links { gap: 20px 16px; }
-  .home-page .social-link { min-width: 84px; font-size: 11px; }
-  .home-page .social-icon { width: 44px; height: 44px; }
+  .home-page .social-links-wrap { width: calc(100% - 32px); padding: 18px 0 40px; }
+  .home-page .social-links-heading { font-size: 12px; margin-bottom: 24px; }
+  .home-page .social-links { gap: 24px 18px; }
+  .home-page .social-link { min-width: 100px; font-size: 13px; }
+  .home-page .social-icon { width: 58px; height: 58px; }
+  .home-page .social-icon svg { width: 26px; height: 26px; }
+  .home-page .social-letter { font-size: 19px; }
 }
 
 </style>
